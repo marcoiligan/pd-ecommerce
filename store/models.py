@@ -1,6 +1,6 @@
 from django.db import models
 from category.models import Category
-from accounts.models import Account
+from accounts.models import Account, UserProfile
 from django.db.models import Avg, Count
 # Create your models here.
 class Product(models.Model):
@@ -66,6 +66,10 @@ class ReviewRating(models.Model):
 
     def __str__(self):
         return self.subject
+
+    def get_profile_picture(self):
+        userprofile = UserProfile.objects.get(user=self.user)
+        return userprofile.profile_picture.url
 
 class ProductGallery(models.Model):
     product = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)

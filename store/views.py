@@ -11,9 +11,14 @@ from .forms import ReviewForm
 from django.contrib import messages
 # Create your views here.
 def home(request):
-    products = Product.objects.all().filter(is_available=True).order_by('created_date')
-    for product in products:
-        reviews = ReviewRating.objects.filter(product_id=product.id, status=True)
+    products = list(Product.objects.all().filter(is_available=True).order_by('created_date'))
+    for i in range(0, len(products)):
+        if Variation.objects.filter(product=products[i]).exists():
+            print(products[i].product_name)
+            reviews = ReviewRating.objects.filter(product_id=products[i].id, status=True)
+        else:
+            print("False")
+            products[i].delete()
     context = {
         'products':products,
         'reviews':reviews
@@ -33,8 +38,13 @@ def store(request, category_slug=None):
     paginator = Paginator(products, 6)
     page = request.GET.get('page')
     page_products = paginator.get_page(page)
-    for product in products:
-        reviews = ReviewRating.objects.filter(product_id=product.id, status=True)
+    for i in range(0, len(products)):
+        if Variation.objects.filter(product=products[i]).exists():
+            print(products[i].product_name)
+            reviews = ReviewRating.objects.filter(product_id=products[i].id, status=True)
+        else:
+            print("False")
+            products[i].delete()
     context = {
         'products':page_products,
         'product_count': products.count(),

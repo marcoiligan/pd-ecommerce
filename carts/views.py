@@ -7,6 +7,7 @@ from django.http import HttpResponse
 import json
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 # Create your views here.
 def _cart_id(request):
     cart = request.session.session_key
@@ -25,7 +26,9 @@ def add_cart(request, product_id):
                 variation = Variation.objects.get(product=product,variation_category__variation_name=key, variation_value__iexact=value)
                 product_variation.append(variation)
             except:
-                pass
+                messages.error(request, 'Please choose a variation.')
+                return redirect('product', category_slug=product.category.slug, product_slug=product.slug)
+                
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
     except Cart.DoesNotExist:
