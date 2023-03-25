@@ -49,7 +49,7 @@
 
     <p>{{product.description}}</p>
 
-
+    {% if variations %}
     <hr>
         {% for key, values in variations %}
         <div class="row">
@@ -64,6 +64,7 @@
             </div>
         </div> <!-- row.// -->
         {% endfor %}
+    {% endif %}
         <hr>
         {% if product.stock <= 0 %}
             <h5 class="text-danger">Out of Stock</h5>

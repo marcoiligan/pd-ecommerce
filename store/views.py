@@ -11,14 +11,14 @@ from .forms import ReviewForm
 from django.contrib import messages
 # Create your views here.
 def home(request):
+    reviews = None
     products = list(Product.objects.all().filter(is_available=True).order_by('created_date'))
     for i in range(0, len(products)):
-        if Variation.objects.filter(product=products[i]).exists():
-            print(products[i].product_name)
+        #if Variation.objects.filter(product=products[i]).exists():
             reviews = ReviewRating.objects.filter(product_id=products[i].id, status=True)
-        else:
-            print("False")
-            products[i].delete()
+        # else:
+        #     print("False")
+        #     products[i].delete()
     context = {
         'products':products,
         'reviews':reviews
@@ -28,7 +28,7 @@ def home(request):
 def store(request, category_slug=None):
     category = None
     products = None
-
+    reviews = None
     if category_slug != None:
         category = get_object_or_404(Category, slug=category_slug)
         products = Product.objects.all().filter(category=category, is_available=True).order_by('id')
@@ -39,12 +39,11 @@ def store(request, category_slug=None):
     page = request.GET.get('page')
     page_products = paginator.get_page(page)
     for i in range(0, len(products)):
-        if Variation.objects.filter(product=products[i]).exists():
-            print(products[i].product_name)
+        #if Variation.objects.filter(product=products[i]).exists():
             reviews = ReviewRating.objects.filter(product_id=products[i].id, status=True)
-        else:
-            print("False")
-            products[i].delete()
+        # else:
+        #     print("False")
+        #     products[i].delete()
     context = {
         'products':page_products,
         'product_count': products.count(),

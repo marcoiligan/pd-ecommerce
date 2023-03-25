@@ -1,0 +1,49 @@
+agora==1.2.3
+agora-token-builder==1.0.0
+argh==0.26.2
+asgiref==3.5.2
+beautifulsoup4==4.11.1
+Bottleneck @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_07078715-3ab7-4562-8d3d-d56b0eaa0f7dp504n_ny/croots/recipe/bottleneck_1657175566567/work
+brotlipy==0.7.0
+certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_4d2o0arbv6/croot/certifi_1665076671099/work/certifi
+cffi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_f9af_qffaa/croots/recipe/cffi_1659598650277/work
+charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cryptography @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5871d1ea-0250-4cd7-ac89-4b1e60514f5daqk8t0ow/croots/recipe/cryptography_1652101128666/work
+da-vinci==0.3.0
+dateutils==0.6.12
+distlib==0.3.6
+Django==4.1
+django-admin-honeypot==1.1.0
+django-admin-thumbnails==0.2.6
+django-thumbnails==0.7.0
+env==0.1.0
+filelock==3.8.0
+gunicorn==20.1.0
+idna @ file:///tmp/build/80754af9/idna_1637925883363/work
+lxml==4.9.1
+mysql-connector-python==8.0.32
+numexpr @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_08e1f2b1-735c-4635-9755-5afc6d3eb18ew8ilpa0t/croots/recipe/numexpr_1656940301129/work
+numpy==1.23.3
+onyx.core==1.0.5
+packaging @ file:///tmp/build/80754af9/packaging_1637314298585/work
+pandas==1.4.4
+Pillow==9.2.0
+platformdirs==2.5.2
+protobuf==3.20.3
+psycopg2==2.9.3
+pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyOpenSSL @ file:///opt/conda/conda-bld/pyopenssl_1643788558760/work
+pyparsing @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_3b_3vxnd07/croots/recipe/pyparsing_1661452540919/work
+PySocks @ file:///Users/ktietz/ci_310/pysocks_1643961536721/work
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-dotenv==1.0.0
+pytz==2022.2.1
+requests @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b15e28ca-768e-4951-b4c6-8a7476e43183hrjpnkg9/croots/recipe/requests_1657734638595/work
+scipy==1.9.1
+shortuuid==1.0.10
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+SkPy==0.10.4
+soupsieve==2.3.2.post1
+sqlparse==0.4.2
+urllib3 @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_47l9zvfg19/croots/recipe/urllib3_1659110473746/work
+virtualenv==20.16.4
